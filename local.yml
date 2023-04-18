@@ -16,4 +16,4 @@
    # - include: tasks/nvim-setup.yml
    # - include: tasks/kotlin-lsp-setup.yml
    # - include: tasks/dotfiles.yml
-   # - include: tasks/productivity-tools.yml
+    - include: tasks/productivity-tools.yml
