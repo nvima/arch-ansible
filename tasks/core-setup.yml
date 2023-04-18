@@ -27,7 +27,7 @@
 - name: Install System Packages 3 (the rest)
   become: true
   pacman:
-    name: ["i3blocks", "picom", "arc-gtk-theme", "lxappearance", "arandr", "feh", "playerctl", "picom", "curl", "htop", "go", "lsof", "i3-wm", "ccache", "ninja", "python-pip", "dconf-editor", "nvidia-settings", "pavucontrol", "moreutils", "clang", "mate", "alsa-lib", "libudev0-shim" ]
+    name: ["git", "i3blocks", "picom", "arc-gtk-theme", "lxappearance", "arandr", "feh", "playerctl", "picom", "curl", "htop", "go", "lsof", "i3-wm", "ccache", "ninja", "python-pip", "dconf-editor", "nvidia-settings", "pavucontrol", "moreutils", "clang", "mate", "alsa-lib", "libudev0-shim" ]
   tags:
     - install
     - core
