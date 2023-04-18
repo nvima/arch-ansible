@@ -1,0 +1,7 @@
+- name: Install packages
+  become: true
+  pacman:
+    name: [ "tmux", "wireshark-qt", "fzf", "kdenlive", "gimp", "xclip", "screenkey", "tldr", "ripgrep", "shutter", "firefox" ]
+  tags:
+    - install
+    - productivity
