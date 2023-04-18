@@ -14,6 +14,5 @@
     - include: tasks/npm-packages.yml
     - include: tasks/zsh-setup.yml
     - include: tasks/nvim-setup.yml
-   # - include: tasks/kotlin-lsp-setup.yml
-   # - include: tasks/dotfiles.yml
+    - include: tasks/dotfiles.yml
     - include: tasks/productivity-tools.yml
