@@ -31,3 +31,29 @@
   tags:
     - install
     - core
+    
+- name: Download yay
+  become: false
+  git:
+    repo: 'https://aur.archlinux.org/yay.git'
+    dest: '/tmp/yay'
+  tags:
+    - install
+    - core
+
+- name: Build and install yay
+  become: true
+  shell: makepkg -si --noconfirm
+  args:
+    chdir: '/tmp/yay'
+    creates: '/usr/bin/yay'
+  tags:
+    - install
+    - core
+
+- name: Install libpthread-stubs from AUR
+  become: false
+  shell: yay -S --noconfirm libpthread-stubs
+  tags:
+    - install
+    - core
