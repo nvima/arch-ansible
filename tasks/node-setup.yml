@@ -6,3 +6,16 @@
   tags:
     - install
     - nvm
+
+- name: Install Node.js 14.7.0 with nvm
+  become: false
+  shell: |
+    source {{ ansible_env.HOME }}/.nvm/nvm.sh
+    nvm install 14.7.0
+  args:
+    executable: /bin/bash
+  register: nvm_install_output
+  changed_when: "'Installing' in nvm_install_output.stdout"
+  tags:
+    - install
+    - node
