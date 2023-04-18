@@ -42,7 +42,7 @@
     - core
 
 - name: Build and install yay
-  become: true
+  become: false
   shell: makepkg -si --noconfirm
   args:
     chdir: '/tmp/yay'
