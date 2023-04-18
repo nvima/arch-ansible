@@ -1,0 +1,19 @@
+- hosts: localhost
+  pre_tasks:
+  - name: Update Pacman
+    become: true
+    pacman:
+      update_cache: yes
+      upgrade: yes
+    tags:
+      - install
+      - core
+  tasks:
+    - include: tasks/core-setup.yml
+   # - include: tasks/node-setup.yml
+   # - include: tasks/npm-packages.yml
+   # - include: tasks/zsh-setup.yml
+   # - include: tasks/nvim-setup.yml
+   # - include: tasks/kotlin-lsp-setup.yml
+   # - include: tasks/dotfiles.yml
+   # - include: tasks/productivity-tools.yml
