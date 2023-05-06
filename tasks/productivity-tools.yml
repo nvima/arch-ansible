@@ -1,7 +1,13 @@
 - name: Install packages
   become: true
   pacman:
-    name: [ "tmux", "wireshark-qt", "fzf", "kdenlive", "gimp", "xclip", "screenkey", "tldr", "ripgrep", "shutter", "firefox" ]
+    name: [ "tmux", "wireshark-qt", "fzf", "kdenlive", "gimp", "xclip", "screenkey", "tldr", "ripgrep", "shutter", "firefox", "rustup" ]
+  tags:
+    - install
+    - productivity
+
+- name: Install Rust/Cargo
+  shell: rustup default stable
   tags:
     - install
     - productivity
@@ -10,5 +16,4 @@
   shell: curl -s "https://get.sdkman.io" | bash
   tags:
     - install
-    - dotfiles
-    - neovim
+    - productivity
