@@ -2,6 +2,7 @@
   - Install Sudo
   - Create User "jens" https://linuxhint.com/create_user_arch_linux/
   - Log into jens
+- maybe install vmware tools for vmware workstation
 2) Install Ansible:
 ```
     pacman -Syu --noconfirm && \
