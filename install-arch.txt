@@ -1,0 +1,23 @@
+1) Install Arch: https://www.youtube.com/watch?v=l8YPS2itHfU&ab_channel=clip
+  - Install Sudo
+  - Create User "jens" https://linuxhint.com/create_user_arch_linux/
+  - Log into jens
+2) Install Ansible:
+```
+    pacman -Syu --noconfirm && \
+    pacman -S python \
+              python-pip \
+              python-wheel \
+              python-setuptools \
+              systemd \
+              sudo \
+              git \
+              base \
+              base-devel \
+              --noconfirm && \
+    # Clean up
+    pacman -Scc --noconfirm --noprogressbar --quiet
+```
+
+3) git clone this repo
+4) ansible-playbook local.yml -K
