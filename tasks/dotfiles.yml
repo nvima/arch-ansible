@@ -5,16 +5,16 @@
     - install
     - dotfiles
     - stow
-- name: Cloning .dotfiles
-  ansible.builtin.git:
-    repo: 'https://github.com/jens3911/.dotfiles.git'
-    dest: "{{ lookup('env', 'HOME') }}/.dotfiles"
-    recursive: yes
-    update: yes
-  tags:
-    - install
-    - dotfiles
-    - stow
+# - name: Cloning .dotfiles
+#   ansible.builtin.git:
+#     repo: 'https://github.com/nvima/.dotfiles.git'
+#     dest: "{{ lookup('env', 'HOME') }}/.dotfiles"
+#     recursive: yes
+#     update: yes
+#   tags:
+#     - install
+#     - dotfiles
+#     - stow
 - name: Stow dotfiles
   shell: cd $HOME/.dotfiles && ./ubuntu
   tags:
